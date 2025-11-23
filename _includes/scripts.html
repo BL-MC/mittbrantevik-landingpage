@@ -96,8 +96,8 @@
         },
         function (result)
         {
-            console.log(result.airTemp);
-            console.log(result);
+            $('#airTemp').text(result.airTemp.toString() + ' C');
+            $('#waterTemp').text(result.waterTemp.toString() + ' C');
         }
     );
 
