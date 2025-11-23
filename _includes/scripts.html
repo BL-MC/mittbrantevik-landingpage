@@ -84,21 +84,24 @@
 {% endif %}
 
 <script>
-  $('#stopDosifyButton').click(function()
+  document.addEventListener("DOMContentLoaded", () => 
   {
-    $('.yvideo').each(function()
-    {
-      var el_src = $(this).attr("src");
-      $(this).attr("src",el_src);
-    });
-  });
-  $('#stopConcenSmartButton').click(function()
-  {
-    $('.vvideo').each(function()
-    {
-      var el_src = $(this).attr("src");
-      $(this).attr("src",el_src);
-    });
+    let headerImageElement = document.getElementById("headerImage");
+    let noPics = {{ site.numPics }};
+    let picNo = Math.floor(Math.random() * noPics) + 1;
+    headerImageElement.style.backgroundImage = 'url(' + 'http://192.168.0.93:60427/extra-img/colorizedPhotos/pic_' + picNo.toString() + '.jpg' + ')';
+    $.get(
+        "/weather/json",
+        {
+        },
+        function (result){
+            data = JSON.parse(result);
+            console.log(data);
+        }
+    );
+
+
+
   });
 
 

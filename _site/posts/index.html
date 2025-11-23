@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    Posts - ConcenSmart
+    Posts - Mitt Brantevik
     
   </title>
 
-  <link rel="icon" href="/img/CSLogo.png" type="image/x-icon">
+  <link rel="icon" href="/img/brantevikLogo.png" type="image/x-icon">
 
   <meta name="description" content="">
 
@@ -22,8 +22,8 @@
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://concensmart.com/posts/">
-  <link rel="alternate" type="application/rss+xml" title="ConcenSmart" href="/feed.xml">
+  <link rel="canonical" href="https://mittbrantevik.se/posts/">
+  <link rel="alternate" type="application/rss+xml" title="Mitt Brantevik" href="/feed.xml">
 
 </head>
 
@@ -33,29 +33,15 @@
   <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="/">ConcenSmart</a>
+    <a class="navbar-brand" href="/">Mitt Brantevik</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Application View</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/myapps?external">External</a>
-            <a class="dropdown-item" href="/myapps">Internal</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">About</a>
-          <div class="dropdown-menu">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal1">ConcenSmart</a>
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal2">Dosify</a>
-          </div>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="mailto:info@ockhams.se" target="_blank">Contact</a>
+          <a class="nav-link" href="mailto:info@bl-mc.se" target="_blank">Contact</a>
         </li>
       </ul>
     </div>
@@ -106,7 +92,7 @@
         <ul class="list-inline text-center">
           
           <li class="list-inline-item">
-            <a href="mailto:info@ockhams.se"  data-toggle="tooltip" data-placement="top" title="Email">
+            <a href="mailto:info@bl-mc.se"  data-toggle="tooltip" data-placement="top" title="Email">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
@@ -117,7 +103,7 @@
           
           
           <li class="list-inline-item">
-            <a href="https://www.linkedin.com/company/ockham-technologies-ab"  data-toggle="tooltip" data-placement="top" title="LinkedIn">
+            <a href="https://www.linkedin.com/company/bl-mc"  data-toggle="tooltip" data-placement="top" title="LinkedIn">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -128,7 +114,7 @@
           
           
         </ul>
-        <p class="copyright text-muted">Copyright &copy; Ockham Technologies 2025</p>
+        <p class="copyright text-muted">Copyright &copy; BL-MC AB 2025</p>
       </div>
     </div>
   </div>
@@ -144,21 +130,24 @@
 
 
 <script>
-  $('#stopDosifyButton').click(function()
+  document.addEventListener("DOMContentLoaded", () => 
   {
-    $('.yvideo').each(function()
-    {
-      var el_src = $(this).attr("src");
-      $(this).attr("src",el_src);
-    });
-  });
-  $('#stopConcenSmartButton').click(function()
-  {
-    $('.vvideo').each(function()
-    {
-      var el_src = $(this).attr("src");
-      $(this).attr("src",el_src);
-    });
+    let headerImageElement = document.getElementById("headerImage");
+    let noPics = 50;
+    let picNo = Math.floor(Math.random() * noPics) + 1;
+    headerImageElement.style.backgroundImage = 'url(' + 'http://192.168.0.93:60427/extra-img/colorizedPhotos/pic_' + picNo.toString() + '.jpg' + ')';
+    $.get(
+        "/weather/json",
+        {
+        },
+        function (result){
+            data = JSON.parse(result);
+            console.log(data);
+        }
+    );
+
+
+
   });
 
 

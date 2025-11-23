@@ -1,16 +1,17 @@
-title:              ConcenSmart
-email:              info@ockhams.se
+title:              Mitt Brantevik
+email:              info@bl-mc.se
 #description:        Accelerating the commercialization of compact particle accelerators with the Blinky-Lite control platform
-author:             Ockham Technologies
+author:             BL-MC AB
 baseurl:            ""
-url:                "https://concensmart.com"
+url:                "https://mittbrantevik.se"
+numPics:            50
 
 # Social Profiles
 twitter_username:   
 #github_username:    Blinky-Lite
 facebook_username:  
 instagram_username:  
-linkedin_username:  ockham-technologies-ab
+linkedin_username:  bl-mc
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
