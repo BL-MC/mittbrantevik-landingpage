@@ -96,8 +96,8 @@
         },
         function (result)
         {
-            $('#airTemp').text(result.airTemp.toString() + ' C');
-            $('#waterTemp').text(result.waterTemp.toString() + ' C');
+            $('#airTemp').text(result.airTemp.toFixed(1) + ' C');
+            $('#waterTemp').text(result.waterTemp.toFixed(1) + ' C');
         }
     );
 
