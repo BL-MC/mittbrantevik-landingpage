@@ -143,7 +143,7 @@
     let headerImageElement = document.getElementById("headerImage");
     let noPics = 50;
     let picNo = Math.floor(Math.random() * noPics) + 1;
-    headerImageElement.style.backgroundImage = 'url(' + '/extra-img/colorizedPhotos/pic_' + picNo.toString() + '.jpg' + ')';
+    headerImageElement.style.backgroundImage = 'url(' + '/extra-img/colorizedPhotosCrop/pic_' + picNo.toString() + '.jpg' + ')';
     $.get(
         "/weather/json",
         {
